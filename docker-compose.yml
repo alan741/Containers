@@ -1,0 +1,11 @@
+services:
+  angular:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    command: ng serve --host 0.0.0.0 --poll=2000 --port 4200 --disable-host-check
+    volumes: 
+      - .:/home/app
+      - /home/app/node_modules
+    ports:
+      - 4200:4200
