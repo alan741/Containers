@@ -6,7 +6,9 @@ WORKDIR /home/app
 
 RUN npm install -g @angular/cli
 
-COPY ./package*.json .
+COPY ./package.json .
 RUN npm install
+
+RUN rm /home/app/package.json
 
 EXPOSE 4200
