@@ -2,7 +2,8 @@ FROM node:alpine
 
 LABEL author="Alan Morales"
 
-WORKDIR /home/app
+WORKDIR /var/www
+COPY ./package*.json . 
 
 RUN npm install -g @angular/cli
 
