@@ -3,7 +3,7 @@ FROM node:alpine
 LABEL author="Alan Morales"
 
 WORKDIR /var/www
-COPY ./package*.json .
+COPY ./package*.json . 
 
 RUN npm install
 
